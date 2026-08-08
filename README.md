@@ -18,107 +18,44 @@ World Health Organization (WHO) — Ambient Air Pollution Attributable Death Rat
 World Bank — Hospital Beds per 1,000 People
 
 ## Machine Learning Workflow
-Raw Datasets
-    |
-    v
-Data Cleaning
-    |
-    v
-Data Transformation
-    |
-    v
-Dataset Merging
-    |
-    v
-Missing Value Handling
-    |
-    v
-Exploratory Data Analysis
-    |
-    v
-Outlier & Skewness Analysis
-    |
-    v
-Log Transformation
-    |
-    v
-Feature Preparation
-    |
-    v
-Time-Based Data Split
-    |
-    +--------------------------+
-    |                          |
-    v                          v
-Regression                Classification
-    |                          |
-    v                          v
-Model Training            K-Means
-    |                          |
-    v                          v
-Model Comparison          Risk Categories
-    |                          |
-    v                          v
-XGBoost Selected          RF & KNN
-                               |
-                               v
-                       Random Forest Selected
+
+1. **Raw Datasets**
+2. **Data Cleaning**
+3. **Data Transformation**
+4. **Dataset Merging**
+5. **Missing Value Handling**
+6. **Exploratory Data Analysis (EDA)**
+7. **Outlier and Skewness Analysis**
+8. **Log Transformation**
+9. **Feature Preparation**
+10. **Time-Based Data Split**
+
+### Regression
+
+* Model Training
+* Model Comparison
+* **XGBoost Selected**
+
+### Classification
+
+* K-Means Clustering
+* Risk Category Creation
+* Random Forest and KNN Model Training
+* **Random Forest Selected**
+
+**Data Preparation → EDA → Feature Preparation → Time-Based Split → Regression & Classification → Model Comparison → Best Model Selection**
 
 ## NOTE
 The data_preparation.ipynb notebook performs the main data preparation and exploratory analysis.
 The regression_analysis.ipynb notebook predicts the continuous DeathRate value.
 The categorical_analysis.ipynb notebook performs the mortality risk classification task.
 
-## Important
-### Regression Analysis: 
-Four regression models were trained and compared. Such as:
-
-Linear Regression
-Random Forest Regressor
-KNN Regressor
-XGBoost Regressor
-
-The analysis includes:
-
-Feature scaling
-Feature importance analysis
-Feature selection
-Hyperparameter tuning
-RandomizedSearchCV
-TimeSeriesSplit
-SHAP analysis
-Residual analysis
-Overfitting checks
-Final model evaluation
-
-### Classification Analysis:
-K-Means clustering was first used to create mortality groups based on DeathRate. Four mortality risk categories were created:
-0 → Low
-1 → Moderate
-2 → Elevated
-3 → High
-
-The classification task then used:
-
-Random Forest Classifier
-KNN Classifier
-
-The classification analysis includes:
-
-K-Means clustering
-Elbow Method
-Mortality risk category creation
-Correlation analysis
-Time-based train/validation/test split
-GridSearchCV hyperparameter tuning
-Classification reports
-Confusion matrices
-
 ## Key Output Files
 Source and cleaned datasets
   air_pollutant_dataset_CLEANED.csv
   death_rates_dataset_CLEANED.csv
   hospital_beds_dataset_CLEANED.csv
+  
 Processed datasets
   final_raw_dataset.csv
   log_transformed_dataset(with-null-values).csv
@@ -126,7 +63,6 @@ Processed datasets
   log_transformed_dataset(without-null-values)_categorical.csv
 
 ## Repository Structure
-## 📁 Repository Structure
 
 * **`data/`** 
 * **`final_datasets/`** 
