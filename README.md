@@ -13,9 +13,9 @@ The project has two main objectives:
 The project combines data from NASA AQDH, WHO and the World Bank and applies data preparation, exploratory data analysis, regression, classification, feature analysis, and model evaluation.
 
 ## Datasets
-NASA Earthdata / SEDAC — Country Trends in Major Air Pollutants (AQDH)
-World Health Organization (WHO) — Ambient Air Pollution Attributable Death Rate
-World Bank — Hospital Beds per 1,000 People
+1. NASA Earthdata / SEDAC — Country Trends in Major Air Pollutants (AQDH)
+2. World Health Organization (WHO) — Ambient Air Pollution Attributable Death Rate
+3. World Bank — Hospital Beds per 1,000 People
 
 ## Machine Learning Workflow
 
@@ -46,21 +46,21 @@ World Bank — Hospital Beds per 1,000 People
 **Data Preparation → EDA → Feature Preparation → Time-Based Split → Regression & Classification → Model Comparison → Best Model Selection**
 
 ## NOTE
-The data_preparation.ipynb notebook performs the main data preparation and exploratory analysis.
-The regression_analysis.ipynb notebook predicts the continuous DeathRate value.
-The categorical_analysis.ipynb notebook performs the mortality risk classification task.
+* The data_preparation.ipynb notebook performs the main data preparation and exploratory analysis.
+* The regression_analysis.ipynb notebook predicts the continuous DeathRate value.
+* The categorical_analysis.ipynb notebook performs the mortality risk classification task.
 
 ## Key Output Files
 Source and cleaned datasets
-  air_pollutant_dataset_CLEANED.csv
-  death_rates_dataset_CLEANED.csv
-  hospital_beds_dataset_CLEANED.csv
+  * air_pollutant_dataset_CLEANED.csv
+  * death_rates_dataset_CLEANED.csv
+  * hospital_beds_dataset_CLEANED.csv
   
 Processed datasets
-  final_raw_dataset.csv
-  log_transformed_dataset(with-null-values).csv
-  log_transformed_dataset(without-null-values).csv
-  log_transformed_dataset(without-null-values)_categorical.csv
+  * final_raw_dataset.csv
+  * log_transformed_dataset(with-null-values).csv
+  * log_transformed_dataset(without-null-values).csv
+  * log_transformed_dataset(without-null-values)_categorical.csv
 
 ## Repository Structure
 
