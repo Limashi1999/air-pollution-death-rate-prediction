@@ -19,37 +19,50 @@ World Bank — Hospital Beds per 1,000 People
 
 ## Machine Learning Workflow
 Raw Datasets
-     ↓
+    |
+    v
 Data Cleaning
-     ↓
+    |
+    v
 Data Transformation
-     ↓
+    |
+    v
 Dataset Merging
-     ↓
+    |
+    v
 Missing Value Handling
-     ↓
+    |
+    v
 Exploratory Data Analysis
-     ↓
+    |
+    v
 Outlier & Skewness Analysis
-     ↓
+    |
+    v
 Log Transformation
-     ↓
+    |
+    v
 Feature Preparation
-     ↓
+    |
+    v
 Time-Based Data Split
-     ↓
- ┌───────────────────────┐
- │                       │
-Regression           Classification
- │                       │
- ↓                       ↓
-Model Training       K-Means
- │                       ↓
- ↓                  Risk Categories
-Model Comparison        ↓
- │                  RF & KNN
- ↓                       ↓
-XGBoost Selected     RandomForest Selected
+    |
+    +--------------------------+
+    |                          |
+    v                          v
+Regression                Classification
+    |                          |
+    v                          v
+Model Training            K-Means
+    |                          |
+    v                          v
+Model Comparison          Risk Categories
+    |                          |
+    v                          v
+XGBoost Selected          RF & KNN
+                               |
+                               v
+                       Random Forest Selected
 
 ## NOTE
 The data_preparation.ipynb notebook performs the main data preparation and exploratory analysis.
